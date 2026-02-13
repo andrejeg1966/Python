@@ -1,0 +1,5 @@
+Test Ausführen: 
+1. Erstelle conftest.py
+2. Wechsle zur Ordner von conftest.py 
+3. Gebe Befehl: pytest. 
+4. Falls es nicht geht, gib einmal: python -m pytest

@@ -1,0 +1,15 @@
+Python Virtual Environment
+
+A virtual environment in Python is an isolated environment on your computer, where you can run and test your Python projects.
+It allows you to manage project-specific dependencies without interfering with other projects or the original Python installation.
+Think of a virtual environment as a separate container for each Python project. Each container:
+
+- Creating a Virtual Environment: C:\Users\Your Name> python -m venv myfirstproject
+- Activate Virtual Environment: C:\Users\Your Name> myfirstproject\Scripts\activate
+- Install Packages: (myfirstproject) C:\Users\Your Name> pip install cowsay
+- Using Package. test.py: 	import cowsay
+
+				cowsay.cow("Good Mooooorning!")
+- (myfirstproject) C:\Users\Your Name> python test.py
+- Deactivate Virtual Environment: (myfirstproject) C:\Users\Your Name> deactivate
+- Delete Virtual Environment: C:\Users\Your Name> rmdir /s /q myfirstproject
