@@ -1,13 +1,13 @@
 print("\n************Creating a Dictionary****************")
-data = { "name": "Jake", "age": 22 }
+data = {"name": "Jake", "age": 22}
 print(data)
 
 # using dict() constructor
-d2 = dict(a = "Geeks", b = "for", c = "Geeks")
+d2 = dict(a="Geeks", b="for", c="Geeks")
 print(d2)
 
 print("\n************Accessing Dictionary Items****************")
-d = { "name": "Kat", 1: "Python", (1, 2): [1,2,4] }
+d = {"name": "Kat", 1: "Python", (1, 2): [1, 2, 4]}
 
 # Access using key
 print(d["name"])
@@ -16,7 +16,7 @@ print(d["name"])
 print(d.get("name"))
 
 print("\n************Adding and Updating Dictionary Items****************")
-d = {1: 'Geeks', 2: 'For', 3: 'Geeks'}
+d = {1: "Geeks", 2: "For", 3: "Geeks"}
 
 # Adding a new key-value pair
 d["age"] = 22
@@ -26,13 +26,13 @@ d[1] = "Python dict"
 print(d)
 
 print("\n************Removing Dictionary Items****************")
-d = {1: 'Geeks', 2: 'For', 3: 'Geeks', 'age':22}
+d = {1: "Geeks", 2: "For", 3: "Geeks", "age": 22}
 
-# Using del 
+# Using del
 del d["age"]
 print(d)
 
-# Using pop() 
+# Using pop()
 val = d.pop(1)
 print(val)
 
@@ -45,7 +45,7 @@ d.clear()
 print(d)
 
 print("\n************Iterating Through a Dictionary****************")
-d = {1: 'Geeks', 2: 'For', 'age':22}
+d = {1: "Geeks", 2: "For", "age": 22}
 
 # Iterate over keys
 for key in d:
@@ -58,18 +58,18 @@ for value in d.values():
 # Iterate over key-value pairs
 for key, value in d.items():
     print(f"{key}: {value}")
-    
+
 d = {x: x**3 for x in range(10) if x**3 % 4 == 0}
 print(d)
-    
+
 print("\n************Dictionary Comprehension****************")
 
 sq = {x: x**2 for x in range(1, 6)}
 print(sq)
 
 print("\n***********Creating a Dictionary from Two Lists****************")
-keys = ['a','b','c','d','e']
-values = [1, 2, 3, 4, 5]  
+keys = ["a", "b", "c", "d", "e"]
+values = [1, 2, 3, 4, 5]
 
-d = {k:v for (k,v) in zip(keys, values)}  
-print (d)
+d = {k: v for (k, v) in zip(keys, values)}
+print(d)

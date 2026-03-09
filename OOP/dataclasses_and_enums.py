@@ -1,11 +1,12 @@
-'''
+"""
 Created on 10.03.2025
 
 @author: goran
-'''
+"""
+
 from test.test_pprint import dataclass1
 
-'''
+"""
 
 class Bogen:
     def __init__(self, name, preis , schaden):
@@ -14,10 +15,12 @@ class Bogen:
         self.schaden = schaden
 
 bogen_a = Bogen("Toller bogen", 10, 100)
-'''
+"""
 
 from dataclasses import dataclass
 from enum import Enum
+
+
 # Dataclass macht syntax deutlich simple und die magic methoden sind nicht mehr notwending
 # wird verwendet nur für Daten
 @dataclass(frozen=False, repr=True)
@@ -27,10 +30,11 @@ class Bogen:
     schaden: int = 100
 
 
-#Vererbung
+# Vererbung
 @dataclass(frozen=False)
 class MagicBogen(Bogen):
     mcg_dmg: int = 200
+
 
 bogen1 = Bogen("Standard Bogen", 500, 90)
 print(bogen1)
@@ -44,18 +48,16 @@ print(bogen3)
 print("**************    2    ***************")
 
 
-
-#enum
-#@unique         # um values unique festzulegen
+# enum
+# @unique         # um values unique festzulegen
 class Waffen(Enum):
     S = "Schwert"
     B = "Bogen"
     C = "Axt"
-   
+
+
 print(Waffen)
-print(repr(Waffen.B))  
-print(Waffen.B.name) 
-print(Waffen.B.value)    
+print(repr(Waffen.B))
+print(Waffen.B.name)
+print(Waffen.B.value)
 print("**************    3    ***************")
-
-

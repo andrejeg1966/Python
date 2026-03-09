@@ -1,9 +1,10 @@
-'''
+"""
 Created on 06.03.2025
 
 @author: goran
-'''
-x =[1,2,3,4,5,6]
+"""
+
+x = [1, 2, 3, 4, 5, 6]
 
 for item in x:
     print(x)
@@ -11,7 +12,7 @@ for item in x:
 print("*******************")
 
 for item in x:
-    if (item == 4):
+    if item == 4:
         print(item * 10)
     else:
         print(item * 2)
@@ -19,22 +20,22 @@ for item in x:
 print("*******************")
 
 for item in x:
-    if (item == 4):
+    if item == 4:
         continue
     else:
         print(item * 2)
-        
+
 
 print("*******************")
 
 for item in x:
-    if (item == 4):
+    if item == 4:
         break
     else:
         print(item * 2)
-        
+
 print("*******************")
-x =[123,24,378,42,56,61]
+x = [123, 24, 378, 42, 56, 61]
 for index, item in enumerate(x):
     print(index, item)
 

@@ -1,21 +1,22 @@
-'''
+"""
 Created on 09.12.2025
 
 @author: GoranAndrejevic
-'''
+"""
 
 # content of test_publish_article.py
 
-from pytest_bdd import scenario, given, when, then
+from pytest_bdd import given, scenario, then, when
 
-@scenario('publish_article.feature', 'Publishing the article')
+
+@scenario("publish_article.feature", "Publishing the article")
 def test_publish():
     pass
 
 
 @given("I'm an author user")
 def author_user(auth, author):
-    auth['user'] = author.user
+    auth["user"] = author.user
 
 
 @given("I have an article", target_fixture="article")
@@ -25,18 +26,18 @@ def article(author):
 
 @when("I go to the article page")
 def go_to_article(article, browser):
-    browser.visit(urljoin(browser.url, '/manage/articles/{0}/'.format(article.id)))
+    browser.visit(urljoin(browser.url, "/manage/articles/{0}/".format(article.id)))
 
 
 @when("I press the publish button")
 def publish_article(browser):
-    browser.find_by_css('button[name=publish]').first.click()
+    browser.find_by_css("button[name=publish]").first.click()
 
 
 @then("I should not see the error message")
 def no_error_message(browser):
     with pytest.raises(ElementDoesNotExist):
-        browser.find_by_css('.message.error').first
+        browser.find_by_css(".message.error").first
 
 
 @then("the article should be published")

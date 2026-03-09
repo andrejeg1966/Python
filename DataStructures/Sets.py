@@ -1,13 +1,13 @@
-'''
+"""
 Docstring for DataStructures.Sets
-Python set is an unordered collection of multiple items having different datatypes. 
+Python set is an unordered collection of multiple items having different datatypes.
 In Python, sets are mutable, unindexed and do not contain duplicates. The order of elements in a set is not preserved and can change.
 
 Can store None values.
 Implemented using hash tables internally.
 Do not implement interfaces like Serializable or Cloneable.
 Python sets are not inherently thread-safe; synchronization is needed if used across threads.
-'''
+"""
 
 print("***************Creating a Set in Python****************")
 
@@ -43,7 +43,7 @@ try:
     print(set1[0])
 except TypeError as e:
     print(e)
-    
+
 print("\n*****************Adding Elements to a Set in Python****************")
 # Creating a set
 set1 = {1, 2, 3}
@@ -70,17 +70,17 @@ print("\n*****************Removing Elements from the Set in Python**************
 # Using Remove Method
 set1 = {1, 2, 3, 4, 5}
 set1.remove(3)
-print(set1)  
+print(set1)
 
 # Attempting to remove an element that does not exist
 try:
     set1.remove(10)
 except KeyError as e:
-    print("Error:", e)  
+    print("Error:", e)
 
 # Using discard() Method
 set1.discard(4)
-print(set1)  
+print(set1)
 
 # Attempting to discard an element that does not exist
 set1.discard(10)  # No error raised

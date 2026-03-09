@@ -1,11 +1,13 @@
-'''
+"""
 Created on 14.05.2025
 
 @author: goran
-'''
+"""
 
 import asyncio
+
 import websockets
+
 
 async def hello():
     uri = "ws://localhost:8765"
@@ -13,10 +15,11 @@ async def hello():
         name = input("What's your name? ")
 
         await websocket.send(name)
-        print(f'Client sent: {name}')
+        print(f"Client sent: {name}")
 
         greeting = await websocket.recv()
         print(f"Client received: {greeting}")
+
 
 if __name__ == "__main__":
     asyncio.run(hello())

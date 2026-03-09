@@ -1,8 +1,8 @@
-'''
+"""
 Created on 06.03.2025
 
 @author: goran
-'''
+"""
 
 name = input("Enter your name: ")
 print("Hello,", name, "! Welcome!")
@@ -25,7 +25,7 @@ print(type(str1))
 print(type(x))
 
 s = "one,two,three"
-words = s.split(',')
+words = s.split(",")
 print(words)
 print(type(words))
 print(s)

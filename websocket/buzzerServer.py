@@ -1,17 +1,19 @@
-'''
+"""
 Created on 14.05.2025
 
 @author: goran
-'''
+"""
 
 import asyncio
+
 import websockets
 
 # create an empty list to store clients
 clients = []
 
+
 # define a function to handle incoming messages from clients
-#async def handle_message(websocket, path):
+# async def handle_message(websocket, path):
 async def handle_message(websocket):
     global clients
     global fastest_time
@@ -26,12 +28,13 @@ async def handle_message(websocket):
             t = round(response_time - fastest_time, 2)
             await websocket.send(f"Response time: {t} sec slower.")
 
+
 # start the websocket server
 async def start_server():
     async with websockets.serve(handle_message, "localhost", 8765):
-        print('Websockets Server Started')
+        print("Websockets Server Started")
         await asyncio.Future()
 
-if __name__ == "__main__":# run the server
-    asyncio.run(start_server())
 
+if __name__ == "__main__":  # run the server
+    asyncio.run(start_server())

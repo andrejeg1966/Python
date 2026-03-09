@@ -1,0 +1,20 @@
+Code in script.py ist kein gute Python code
+
+1. Die Funktionsname sind nicht entsprechend
+2. Keine Type Annotation für die Funktionsargumente
+3. Verstoß gegen Modularität von Python
+4. Verstoß gegen verschiedene PEP8 Style Guide
+   - Reihenfolge von Imports
+   - Zuwenig Line space zwischen den Funktionen
+   - Keine Docstrings
+5. Es gibt verschieden Python Hilfspaketen 
+   - pylint -> pip install pylint
+   - black -> pip install black (Code Formatierung)
+     Ausführen black . Zwei line Space zwischen den Funtionen als Ergebniss 
+   - isort - pip install isort (Importe zu sortieren in der richtige Reihenfolge)
+     Ausführen. isort .   Punkt zeig auf Root Verzeichniss
+   - mypy -> pip install mypy (hilft z.B bei Type Annotation) 
+6. Docstrings: VSC -> Extensions -> docstring -> Python Docstrins Generator 
+   Nach der Installation von docstins -> Einstellung in "Rädchen" -> Erweiterungseinstellung -> Wähle DocString Format 
+   Google ist Standard. Numpy ist auch zu empfehlen.
+   Docstring erstellen: Unter der Funktionsdefinition drei Ausführungszeichen, Summary Argumente und Return beschreiben

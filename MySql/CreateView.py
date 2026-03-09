@@ -1,15 +1,14 @@
-'''
+"""
 Created on 24.12.2025
 
 @author: GoranAndrejevic
-'''
+"""
+
 import mysql.connector
-#establishing the connection
+
+# establishing the connection
 connection = mysql.connector.connect(
-   host='localhost',
-   user='root',
-   password='Velesnica1966?',
-   database='MySqlPythonDB'
+    host="localhost", user="root", password="Velesnica1966?", database="MySqlPythonDB"
 )
 cursorObj = connection.cursor()
 create_view_query = """

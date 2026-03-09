@@ -6,7 +6,7 @@ print("***********")
 a = "Hello"
 b = "world"
 
-res = "{} {}".format(a, b)
+res = "{0} {1}".format(a, b)
 print(res)
 
 print("*****************")
@@ -16,9 +16,8 @@ res = "This is %s programming!" % a
 print(res)
 
 a = "5"
-b = 't'
+b = "t"
 n = int(a)
 
 print(n)
 print(type(n))
-

@@ -1,8 +1,8 @@
-'''
+"""
 Created on 06.03.2025
 
 @author: goran
-'''
+"""
 
 a = 1
 b = 3
@@ -15,7 +15,7 @@ y = "World"
 z = x + y
 print(z)
 
-#gehst nicht
+# gehst nicht
 # z = a + x
 
 b1 = True

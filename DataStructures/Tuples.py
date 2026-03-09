@@ -1,17 +1,17 @@
-'''
+"""
 A tuple in Python is an immutable ordered collection of elements.
 
 Tuples are similar to lists, but unlike lists, they cannot be changed after their creation (i.e., they are immutable).
 Tuples can hold elements of different data types.
 The main characteristics of tuples are being ordered, heterogeneous and immutable.
-'''
+"""
 
 print("************Creating a Tuple****************")
 tup = ()
 print(tup)
 
 # Using String
-tup = ('Geeks', 'For')
+tup = ("Geeks", "For")
 print(tup)
 
 # Using List
@@ -19,7 +19,7 @@ li = [1, 2, 4, 5, 6]
 print(tuple(li))
 
 # Using Built-in Function
-tup = tuple('Geeks')
+tup = tuple("Geeks")
 print(tup)
 
 print("************Accessing of Tuples****************")
@@ -28,7 +28,7 @@ tup = tuple("Geeks")
 print(tup[0])
 
 # Accessing a range of elements using slicing
-print(tup[1:4])  
+print(tup[1:4])
 print(tup[:3])
 
 # Tuple unpacking
@@ -41,7 +41,7 @@ print(b)
 print(c)
 
 print("************Slicing of Tuple****************")
-tup = tuple('GEEKSFORGEEKS')
+tup = tuple("GEEKSFORGEEKS")
 
 # Removing First element
 print(tup[1:])

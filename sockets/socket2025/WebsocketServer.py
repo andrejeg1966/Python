@@ -1,24 +1,29 @@
-'''
+"""
 Created on 08.05.2025
 
 @author: goran
-'''
+"""
 
 import asyncio
+
 import websockets
-#import socket
+
+# import socket
+
 
 async def hello(websocket):
     name = await websocket.recv()
-    print(f'Server Received: {name}')
-    greeting = f'Hello {name}!'
+    print(f"Server Received: {name}")
+    greeting = f"Hello {name}!"
 
     await websocket.send(greeting)
-    print(f'Server Sent: {greeting}')
+    print(f"Server Sent: {greeting}")
+
 
 async def main():
     async with websockets.serve(hello, "localhost", 8765):
         await asyncio.Future()  # run forever
+
 
 if __name__ == "__main__":
     asyncio.run(main())

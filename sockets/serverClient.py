@@ -1,15 +1,19 @@
-import select, socket, sys, Queue
+import select
+import socket
+import sys
+
+import Queue
+
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setblocking(0)
-server.bind(('localhost', 50000))
+server.bind(("localhost", 50000))
 server.listen(5)
 inputs = [server]
 outputs = []
 message_queues = {}
 
 while inputs:
-    readable, writable, exceptional = select.select(
-        inputs, outputs, inputs)
+    readable, writable, exceptional = select.select(inputs, outputs, inputs)
     for s in readable:
         if s is server:
             connection, client_address = s.accept()

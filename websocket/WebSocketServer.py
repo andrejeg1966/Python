@@ -1,7 +1,7 @@
-from socket import socket
+import struct
 from base64 import b64encode
 from hashlib import sha1
-import struct
+from socket import socket
 
 MAGIC = b"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
 
@@ -27,20 +27,20 @@ Sec-WebSocket-Accept: {b64encode(sha1(Sec_WebSocket_Key + MAGIC).digest()).decod
 
 conn.send(response.replace("\n", "\r\n").encode())
 
-while True: # decode messages from the getIPAddress
+while True:  # decode messages from the getIPAddress
     header = conn.recv(2)
-    print(f'header: {header}')
-    FIN = bool(header[0] & 0x80) # bit 0
+    print(f"header: {header}")
+    FIN = bool(header[0] & 0x80)  # bit 0
     assert FIN == 1, "We only support unfragmented messages"
-    opcode = header[0] & 0xf # bits 4-7
-    assert (opcode == 1 or opcode == 2), "We only support data messages"
-    masked = bool(header[1] & 0x80) # bit 8
+    opcode = header[0] & 0xF  # bits 4-7
+    assert opcode == 1 or opcode == 2, "We only support data messages"
+    masked = bool(header[1] & 0x80)  # bit 8
     assert masked, "The getIPAddress must mask all frames"
-    payload_size = header[1] & 0x7f # bits 9-15
+    payload_size = header[1] & 0x7F  # bits 9-15
     assert payload_size <= 125, "We only support small messages"
     masking_key = conn.recv(4)
     payload = bytearray(conn.recv(payload_size))
     for i in range(payload_size):
         payload[i] = payload[i] ^ masking_key[i % 4]
-    conn.send(struct.pack("BB", 0x80 | opcode, payload_size) + payload) # echo message
+    conn.send(struct.pack("BB", 0x80 | opcode, payload_size) + payload)  # echo message
     print("Received", "text" if opcode == 1 else "binary", "message", payload)

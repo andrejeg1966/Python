@@ -1,17 +1,17 @@
 # string modulo operator(%)
 
-print("Geeks : %1d, Portal : %5.2f" % (1, 05.333)) 
+print("Geeks : %1d, Portal : %5.2f" % (1, 05.333))
 
-print("Total students : %3d, Boys : %2d" % (240, 120))   # print integer value
+print("Total students : %3d, Boys : %2d" % (240, 120))  # print integer value
 
-print("%7.3o" % (25))   # print octal value
+print("%7.3o" % (25))  # print octal value
 
-print("%10.3E" % (356.08977))   # print exponential value
+print("%10.3E" % (356.08977))  # print exponential value
 
 # Positional formatting with format() method
 
 # Using indexed placeholders for string formatting
-print("I love {0} for \"{1}!\"".format("Geeks", "Geeks"))
+print('I love {0} for "{1}!"'.format("Geeks", "Geeks"))
 
 # {0} is replaced by the first argument 'Geeks'
 print("{0} and Portal".format("Geeks"))
@@ -38,12 +38,19 @@ cstr = "I love geeksforgeeks"
 
 # Printing the center aligned string with fillchr
 print("Center aligned: ")
-print(cstr.center(40, '#'))
+print(cstr.center(40, "#"))
 
 # Printing the left aligned string with "-" padding
 print("left aligned: ")
-print(cstr.ljust(40, '-'))
+print(cstr.ljust(40, "-"))
 
 # Printing the right aligned string with "-" padding
 print("right aligned: ")
-print(cstr.rjust(40, '-'))
+print(cstr.rjust(40, "-"))
+
+# use f string
+name = "Alice"
+age = 25
+print(f"My name is {name} and I am {age} years old")
+print(f"My name is {"Alice"} and I am {25} years old")
+print("My name is {0} and I am {1} years old".format(name, age))

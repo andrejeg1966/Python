@@ -8,13 +8,14 @@ class EvenNumbers:
         self.n += 2  # Increment by 2 to get the next even number
         return x
 
+
 # Create an instance of EvenNumbers
 even = EvenNumbers()
 it = iter(even)
 
 # Print the first five even numbers
-print(next(it))  
-print(next(it)) 
-print(next(it))  
-print(next(it)) 
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
 print(next(it))
