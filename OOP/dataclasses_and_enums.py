@@ -4,26 +4,14 @@ Created on 10.03.2025
 @author: goran
 """
 
-from test.test_pprint import dataclass1
-
-"""
-
-class Bogen:
-    def __init__(self, name, preis , schaden):
-        self.name = name
-        self.preis = preis
-        self.schaden = schaden
-
-bogen_a = Bogen("Toller bogen", 10, 100)
-"""
-
 from dataclasses import dataclass
 from enum import Enum
 
 
 # Dataclass macht syntax deutlich simple und die magic methoden sind nicht mehr notwending
-# wird verwendet nur für Daten
-@dataclass(frozen=False, repr=True)
+# wird verwendet nur für Daten, 
+#https://docs.python.org/3/library/dataclasses.html#module-dataclasses
+@dataclass(frozen=False, repr=True) #frozen -> ist verändbar
 class Bogen:
     name: str
     preis: float

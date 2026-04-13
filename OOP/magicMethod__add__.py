@@ -1,3 +1,29 @@
+# Beispiel __add__ method
+class BankAccount:
+    def __init__(self, initial_balance):
+        self.balance = initial_balance
+        
+    def __add__(self, other):
+        if (isinstance(other, int)):
+            total = self.balance + other
+        else:
+            total = self.balance + other.balance
+        return BankAccount(total)
+    
+    def __radd__(self, other):
+        return self.__add__(other) #self == account, other == 5000
+        
+
+account1 = BankAccount(1000)
+account2 = BankAccount(2000)
+new_account = account1 + account2
+new_account1 = account1 + 4000 #call __add__ method
+new_account2 = 5000 + account1 #call __radd__ method
+print(f"New Account: {new_account.balance}")
+print(f"New Account1: {new_account1.balance}")
+print(f"New Account2: {new_account2.balance}")
+
+
 class A:
     def __init__(self, a):
         self.a = a
@@ -20,7 +46,6 @@ print(A.__add__(ob1, ob2))
 print(ob1.__add__(ob2))
 
 print("Class Complex")
-
 
 class Complex:
     def __init__(self, a, b):

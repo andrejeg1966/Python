@@ -4,7 +4,6 @@ Created on 07.03.2025
 @author: goran
 """
 
-
 class Archer:
     def __init__(self, hp, mana, arrows):
         self.hp = hp

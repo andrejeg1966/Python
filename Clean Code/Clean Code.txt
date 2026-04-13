@@ -9,11 +9,13 @@ Code in script.py ist kein gute Python code
    - Keine Docstrings
 5. Es gibt verschieden Python Hilfspaketen 
    - pylint -> pip install pylint
+     Ausführen pylint./Ordner/file.py
    - black -> pip install black (Code Formatierung)
      Ausführen black . Zwei line Space zwischen den Funtionen als Ergebniss 
    - isort - pip install isort (Importe zu sortieren in der richtige Reihenfolge)
      Ausführen. isort .   Punkt zeig auf Root Verzeichniss
-   - mypy -> pip install mypy (hilft z.B bei Type Annotation) 
+   - mypy -> pip install mypy (hilft z.B bei Type Annotation. Wenn man Funktion mit falschen typen von Argumenten aufruft. Z.B statt float wird Funktion mit integer)
+     Ausführen mypy <script.py>
 6. Docstrings: VSC -> Extensions -> docstring -> Python Docstrins Generator 
    Nach der Installation von docstins -> Einstellung in "Rädchen" -> Erweiterungseinstellung -> Wähle DocString Format 
    Google ist Standard. Numpy ist auch zu empfehlen.

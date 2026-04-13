@@ -6,9 +6,9 @@ Created on 12.03.2025
 
 
 class Archer:
-    # definieren eines slots, keine magic methode sondern Datenobject
-    # slots sind statische objekte um Resourcen zu schonen. Also wird nicht meht´r in instance dictonary gespeichert
-    __slots__ = ("hp", "mana")
+    # definieren eines slots, keine magic methode sondern ein Datenobject
+    # slots sind statische objekte um Resourcen zu schonen. Also wird nicht mehr in instance dictonary gespeichert
+    __slots__ = ("hp", "mana") # damit wird kein instance dictionary mehr erstellt
 
     def __init__(self, hp, mana):
         self.hp = hp
@@ -23,17 +23,22 @@ class Archer2:
 
 
 archer = Archer(100, 50)
+archer1 = Archer(200, 50)
+
 
 # keine weitere Atributte ist erlaubt
 # archer.arrows = 12
 print(archer.hp)
-# Keine dynamsches dictionary, sonder statischer slots wird verwenden
-# print(archer.__dict__)2
+# Keine dynamsches dictionary, sondern statischer slots wird verwenden
+#print(archer.__dict__)
 archer2 = Archer2(100, 50)
 
+
+#************************************************************************
 from pympler import asizeof  # um grösser von Objekten zu prüfen
 
 print(asizeof.asized(archer))
+print(asizeof.asized(archer1))
 print(asizeof.asized(archer2))
 
 

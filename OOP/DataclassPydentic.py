@@ -1,6 +1,10 @@
 from pydantic import BaseModel  # pydentc doesn't work
-
-
+from enum import Enum
+class Waffen(Enum):
+    S = "Schwert"
+    B = "Bogen"
+    C = "Axt"
+    
 class WaffenKammer(BaseModel):
     zimmer: int
     waffen: list[Waffen]
@@ -14,7 +18,6 @@ print("**************    4    ***************")
 
 
 # Pydentic
-
 
 class PyDanticBogen(BaseModel):
     name: str

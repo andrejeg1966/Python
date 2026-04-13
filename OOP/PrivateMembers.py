@@ -3,7 +3,6 @@
 Docstring for OOP.PrivateMembers
 """
 
-
 class Employee:
     def __init__(self, name, salary):
         self.name = name  # public
@@ -16,4 +15,4 @@ class Employee:
 emp = Employee("Robert", 60000)
 print(emp.name)  # Public accessible
 emp.show_salary()  # Accessing private correctly
-# print(emp.__salary)    # Error: Not accessible directly
+#print(emp.__salary)    # Error: Not accessible directly

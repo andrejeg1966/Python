@@ -57,6 +57,7 @@ archer2 = Archer(20, 50, 5)
 # archer2.mana = 40
 
 print(archer1.__dict__)
+print(archer2.__dict__)
 
 print(archer1.hp)
 print(archer1.mana)

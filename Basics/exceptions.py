@@ -5,9 +5,9 @@ Created on 06.03.2025
 """
 
 try:
-    10 / "ss"
+    10 / 0
 except ZeroDivisionError as e:
-    print("Fehler: " + str(e))
+    print("Zeroo Division Fehler: " + str(e))
 except TypeError as e:
     print("Type Fehler: " + str(e))
 
@@ -22,20 +22,22 @@ except ValueError as e:
 print("*************Catching Multiple Exceptions*****************")
 a = ["10", "twenty", 30]  # Mixed list of integers and strings
 try:
-    total = int(a[0]) + int(a[3])  # 'twenty' cannot be converted to int
+    total = int(a[0]) + int(a[2])  # 'twenty' cannot be converted to int
 
 except (ValueError, TypeError) as e:
     print("Error: ", str(e))
 
 except IndexError:
     print("Index out of range.")
+    
+    
 print("****************Catch-All Handlers and Their Risks*****************")
 try:
     res = "100" / 20  # Risky operation: dividing string by number
 except ArithmeticError as e:
     print("Aritmetic Error: ", str(e))
 except:
-    print("Something went wrongS")
+    print("Something went wrong")
 
 print("**********Raise an Exception*************")
 

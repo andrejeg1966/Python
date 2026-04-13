@@ -20,7 +20,6 @@ class Archer(BasePlayer):
         super().__init__(hp=hp)
         self.arrows = arrows
 
-
 class Wizard(BasePlayer):
     pass
 
@@ -37,13 +36,11 @@ x = {"bla": 122}
 x["bla"] = 123
 print(x)
 
-
 class NoUpdateDictionary(dict):
     def __setitem__(self, key, value):
         if key in self:
             raise KeyError("Key existiert bereits")
         super().__setitem__(key, value)
-
 
 x = NoUpdateDictionary()
 x["key"] = 125

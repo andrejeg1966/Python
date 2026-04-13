@@ -1,0 +1,39 @@
+Python Virtual Environment
+
+A virtual environment in Python is an isolated environment on your computer, where you can run and test your Python projects.
+It allows you to manage project-specific dependencies without interfering with other projects or the original Python installation.
+Think of a virtual environment as a separate container for each Python project. Each container:
+
+- Creating a Virtual Environment: <C:\Dev\KI\Python\MLAPI> python -m venv appML
+- Activate Virtual Environment: go to <C:\Dev\KI\Python\MLAPI\appML\Scripts> and execute: activate
+- go back to <C:\Dev\KI\Python\MLAPI>
+- Check for instalation with: pip list
+- Install Packages: pip install ipykernel
+  - pip install ipykernel
+  - Link ipkernel package with env: python -m ipykernel install --name applML --display-name "ML App". "ML App" is the Name in Jupyter Lab
+  - pip install jupyterlab
+- start jupyter lab: jupyter-lab
+  - Copy the token from anaconda prompt <http://localhost:8888/lab?token=64f92d97ec23572e7a7aef491774d81b8db57bed49e119c6>
+- open other anaconda prompt and activate the jupyter kernel:
+  - go to <C:\Dev\KI\Python\MLAPI\appML\Scripts> and execute: activate
+- Install other packages:
+  - pip install pandas
+  - pip install scikit-learn
+  - pip install seaborn
+  
+- Deactivate Virtual Environment: go to <C:\Dev\KI\Python\MLAPI\appML\Scripts> and execute: deactivate
+- Delete Virtual Environment: go to <C:\Dev\KI\Python\MLAPI\appML\Scripts> and execute: rmdir /s /q appML
+
+**************Anaconda Virtual Environment**************
+anaconda prompt
+create project
+conda create --name testenv -> installiert die nuesete Python Version
+conda create --name testenv python==3.13  -> installiert die 3.13 Python Version
+conda activate testenv
+conda install Spyder
+pip freeze -> zeige an die Package
+pip freeze > requirements.txt - > zeige an package in Datei
+Spyder -> Spyder starten 
+                 
+
+	
