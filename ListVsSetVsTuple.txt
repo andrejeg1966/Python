@@ -1,0 +1,37 @@
+https://www.geeksforgeeks.org/python/difference-between-list-vs-set-vs-tuple-in-python/
+
+List in Python
+
+A List is a collection of ordered, mutable elements that can hold a variety of data types. 
+Lists are one of the most commonly used data structures in Python due to their flexibility and ease of use.
+
+Key Characteristics:
+
+Mutable: Elements can be modified after creation.
+Ordered: Maintains the order of elements.
+Allows Duplicates: Can have multiple occurrences of the same value.
+Heterogeneous: Can store different data types.
+
+
+
+Tuple in Python
+A Tuple is an ordered, immutable collection of elements. Tuples are often used when data should not be modified after creation.
+
+Key Characteristics:
+
+Immutable: Once created, elements cannot be modified.
+Ordered: Maintains the order of elements.
+Allows Duplicates: Can contain duplicate values.
+Heterogeneous: Can store different data types.
+
+
+Set in Python
+A Set is an unordered collection of unique elements. Sets are primarily used when membership tests and eliminating duplicate values are needed.
+
+Key Characteristics:
+
+Mutable: Elements can be added or removed.
+Unordered: Does not maintain the order of elements.
+Unique Elements: Duplicate values are automatically removed.
+Heterogeneous: Can store different data types.
+
